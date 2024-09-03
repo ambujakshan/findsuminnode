@@ -7,7 +7,11 @@ app.get('/', (req, res) => {
 })
 
 app.get('/findsum', (req, res) => {
-    res.send('IMPLEMED!')
+
+    let n1= parseInt(req.query.n1);
+    let n2=parseInt(req.query.n2);
+let sum=n1+n2
+    res.send('IMPLEMED!'+sum)
   })
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
